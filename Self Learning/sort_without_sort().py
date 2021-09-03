@@ -91,4 +91,4 @@ sorted_users = {
                 }
 
 f = open("output.json",'w')
-json.dump(sorted_users,f)
+json.dump(sorted_users,f,indent=4)
