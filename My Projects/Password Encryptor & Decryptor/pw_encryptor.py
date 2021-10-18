@@ -20,12 +20,6 @@ rand_dict = {
 'n': '77', '-': '78', 'K': '79', '`': '80', '[': '81', 'G': '82', 'd': '83', 
 'N': '84', 'o': '85', '8': '86', 'W': '87', '+': '88', 'u': '89', '_': '90', 
 '5': '91', '=': '92', 'J': '93', 'A': '94'}
-hexatridec_table = {
-'0':'0','1':'1','2':'2','3':'3','4':'4','5':'5','6':'6','7':'7','8':'8',
-'9':'9','a':'10','b':'11','c':'12','d':'13','e':'14','f':'15','g':'16',
-'h':'17','i':'18','j':'19','k':'20','l':'21','m':'22','n':'23','o':'24',
-'p':'25','q':'26','r':'27','s':'28','t':'29','u':'30','v':'31','w':'32',
-'x':'33','y':'34','z':'35',}
 anti_hexatri_table = {
 '0':'0','1':'1','2':'2','3':'3','4':'4','5':'5','6':'6','7':'7','8':'8',
 '9':'9','10':'a','11':'b','12':'c','13':'d','14':'e','15':'f','16':'g',
@@ -108,11 +102,13 @@ def conv_hexatridec(dec_number):
             hexatridec_output += anti_hexatri_table[str(remainder)]
             break
 
+    # print(hexatridec_output.upper())
+
     return hexatridec_output.upper()
 
 def get_encryption_key(integer):
 	'''
-	Getting the actual operation sequence from the input encryption key
+	Getting the actual encryption operation sequence from the input encryption key
 	(full numerical integer ONLY without limitation on number of digits)
 	'''
 	encryption_opr_seq = []
@@ -129,7 +125,7 @@ def input_1():
 	input_message_1 = "Please enter the encryption key in FULL NUMERICAL INTEGER ONLY\n" \
 					  "Number of digits are not limited\n" \
 					  "Example: 1234567890\n" \
-					  # "Hint: NRIC of program creator\n" \
+					  "Hint: NRIC of program creator\n" \
 					  'Enter "quit" to quit the program\n'
 
 	encryption_key = input(input_message_1)
@@ -195,7 +191,6 @@ while restart == True:
 
 	print("\nYour encrypted key is:")
 	print(encrypted_key)
-	print()
 
 	while reloop_2 == True:
 		cont = input("\nDo you want to continue another encryption? (Y/N)\n")
